@@ -1,6 +1,6 @@
-package org.com.ecommerce.entities;
+package org.ecommerce.entities;
 
-public class Produit {
+public class Produit implements Entite {
 	private static Long lastId=1l; 
 	private Long idProduit;
 	private Double prix;
@@ -17,12 +17,7 @@ public class Produit {
 		this.isEnStock = isEnStock;
 	}
 	
-
-
-
-
-
-	public Long getIdProduit() {
+	public Long getId() {
 		return idProduit;
 	}
 

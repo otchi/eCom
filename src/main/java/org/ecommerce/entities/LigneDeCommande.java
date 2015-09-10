@@ -1,4 +1,4 @@
-package org.com.ecommerce.entities;
+package org.ecommerce.entities;
 
 public class LigneDeCommande {
 	private static Long lastId=1l; 

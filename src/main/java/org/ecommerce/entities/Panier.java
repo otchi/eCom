@@ -1,4 +1,4 @@
-package org.com.ecommerce.entities;
+package org.ecommerce.entities;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -24,13 +24,13 @@ public class Panier {
 
 	public void addLigneCommande(Produit produit,Integer quantite){
 		
-		if(achat.containsKey(produit.getIdProduit())){
-			LigneDeCommande lc=achat.get(produit.getIdProduit());
+		if(achat.containsKey(produit.getId())){
+			LigneDeCommande lc=achat.get(produit.getId());
 			lc.setQuantite(lc.getQuantite()+quantite);
 			return;
 		}
 		
-		achat.put(produit.getIdProduit(), new LigneDeCommande(produit, quantite));
+		achat.put(produit.getId(), new LigneDeCommande(produit, quantite));
 	}
 	
 	public Double getTotal(){

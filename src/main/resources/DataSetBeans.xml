@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+                           
+	<bean id="test" class="org.ecommerce.dataSouce.DataSourceUnity">
+		<constructor-arg type="java.util.Collection">
+			<list value-type="org.ecommerce.entities.Produit">
+				<ref bean="produit1" />
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="produit1" class="org.ecommerce.entities.Produit">
+		<constructor-arg type="java.lang.Double" value="5" />
+		<constructor-arg type="java.lang.String" value="PC" />
+		<constructor-arg type="java.lang.String" value="very well" />
+		<constructor-arg type="java.lang.Boolean" value="true" />
+	</bean>
+</beans>

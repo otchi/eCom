@@ -1,10 +1,10 @@
-package org.com.ecommerce.controller;
+package org.ecommerce.controller;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.com.ecommerce.entities.Panier;
-import org.com.ecommerce.entities.Produit;
+import org.ecommerce.entities.Panier;
+import org.ecommerce.entities.Produit;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -57,7 +57,7 @@ public class PanierController {
 		produits=new HashMap<Long, Produit>();
 		Produit p1=new Produit(50d, "pc", "ordinaeur", true);
 		Produit p2=new Produit(10d, "canapé", "tres bien", false);
-		produits.put(p1.getIdProduit(),p1);
-		produits.put(p2.getIdProduit(),p2);
+		produits.put(p1.getId(),p1);
+		produits.put(p2.getId(),p2);
 	}
 }
